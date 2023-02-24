@@ -14,14 +14,16 @@ This content is all &copy; Australian Research Data Commons, 2023.
 
 ## Contact
 
-_Owner:_  
+### Owner:
+
 **Shawn A Ross**  
 Product Manager, Research Activity Identifier (RAiD)  
 [Australian Research Data Commons](https://ardc.edu.au)  
 <https://orcid.org/0000-0002-6492-9025>  
 <shawn.ross@ardc.edu.au>
 
-_Developers:_
+### Developers:
+
 **Melanie Barlow**  
 Data Management Consultant  
 [Australian Research Data Commons](https://ardc.edu.au)  
