@@ -1,0 +1,95 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX raid: <https://w3id.org/ardc/def/raid/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX role: <http://www.w3.org/ns/dx/prof/role/>
+PREFIX sdo: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://w3id.org/ardc/def/raid>
+    a prof:Profile ;
+    dcterms:provenance "This profile of schema.org, PROV-O and other ontologies was created in 2023 for the ARDC by KurrawongAI and ARDC staff"@en ;
+    owl:versionIRI <https://w3id.org/ardc/def/raid0.0.1> ;
+    owl:versionInfo "0.0.1" ;
+    sdo:codeRespository "https://github.com/Kurrawong/raid-profile/"^^xsd:anyURI ;
+    sdo:copyrightHolder <https://linked.data.gov.au/org/ardc> ;
+    sdo:copyrightNotice "(c) Australian Research Data Commons, 2023" ;
+    sdo:copyrightYear "2023"^^xsd:gYear ;
+    sdo:creator
+        <https://orcid.org/0000-0002-8742-7730> ,
+        <https://orcid.org/0000-0003-1192-5757> ,
+        <https://orcid.org/0000-0002-6492-9025> ;
+    sdo:dateCreated "2023-02-24"^^xsd:date ;
+    sdo:dateIssued "2023-02-24"^^xsd:date ;
+    sdo:dateModified "2023-02-24"^^xsd:date ;
+    sdo:description "A profile of common ontologies for representing projects, organisations and people designed to characterise Research Activity Identifiers (RAiDs)"@en ;
+    sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    sdo:name "RAiD Profile"@en ;
+    sdo:publisher <https://linked.data.gov.au/org/ardc> ;
+    prof:hasResource [
+        a prof:ResourceDescriptor ;
+        rdfs:label "Specification Document" ;
+        rdfs:comment "The authoritative articulation of this profile's requirements, in human-readable form"@en ;
+        prof:hasArtifact raid:spec ;
+        dcterms:format "text/html" ;
+        prof:hasRole role:specification ;
+    ] ,
+    [
+        a prof:ResourceDescriptor ;
+        rdfs:label "Ontology" ;
+        rdfs:comment "The Web Ontology Language data model of this RAiD Profile"@en ;
+        prof:hasArtifact raid:ont ;
+        dcterms:format "text/turtle" ;
+        prof:hasRole role:schema ;
+    ] ,
+    [
+        a prof:ResourceDescriptor ;
+        rdfs:label "SHACL Validator" ;
+        rdfs:comment "A validator that contains just the RAiD Profile's rules"@en ;
+        prof:hasArtifact raid:validator ;
+        dcterms:format "text/turtle" ;
+        prof:hasRole role:validation ;
+    ] ,
+    [
+        a prof:ResourceDescriptor ;
+        rdfs:label "Compounded Validator" ;
+        rdfs:comment "A validator that contains the RAiD Profile validator and those of Standards that it dependents on"@en ;
+        prof:hasArtifact raid:compounded-validator ;
+        dcterms:format "text/turtle" ;
+        prof:hasRole role:validation ;
+    ] ,
+    [
+        a prof:ResourceDescriptor ;
+        rdfs:label "Code Repository" ;
+        rdfs:comment "An online Git version control repository that contains this Profile's content in files" ;
+        prof:hasArtifact raid:repo ;
+        prof:hasRole role:repository ;
+    ] ,
+    [
+        a prof:ResourceDescriptor ;
+        rdfs:label "PROV-O mapping description" ;
+        rdfs:comment "Description of the mappings between this profile and PROV-O elements" ;
+        prof:hasArtifact raid:prov ;
+        prof:hasRole role:mapping ;
+    ] ,
+    [
+        a prof:ResourceDescriptor ;
+        rdfs:label "PROV-O RDF mapping" ;
+        rdfs:comment "RDF/OWL mappings between this profile and PROV-O elements" ;
+        prof:hasArtifact raid:.ttl ;
+        prof:hasRole role:mapping ;
+    ] ;
+.
+
+
+<https://linked.data.gov.au/org/ardc>
+    a sdo:Organization ;
+    sdo:name "Australian Research Data Commons" ;
+    sdo:url "https://ardc.edu.au"^^xsd:anyURI ;
+    sdo:identifier "https://ror.org/038sjwq14"^^xsd:anyURI ;
+.
