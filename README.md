@@ -4,7 +4,7 @@ This repository contains a _profile_ - a standard that inherits from, and constr
 
 See <https://www.raid.org.au/> for more information about RAiDs.
 
-See <https://w3id.org/ardc/def/raid> (not operable yet!) for the profile's online presence.
+**See <https://w3id.org/ardc/def/raid> (not operable yet!) for the profile's online presence.**
 
 ## License & Copyright
 
@@ -17,8 +17,8 @@ This content is all &copy; Australian Research Data Commons, 2023.
 _Owner:_  
 **Shawn A Ross**  
 Product Manager, Research Activity Identifier (RAiD)  
-[Australian Research Data Commons](https://ardc.edu.au)
-<https://orcid.org/0000-0002-6492-9025>
+[Australian Research Data Commons](https://ardc.edu.au)  
+<https://orcid.org/0000-0002-6492-9025>  
 <shawn.ross@ardc.edu.au>
 
 _Developers:_
